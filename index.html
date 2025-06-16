@@ -107,7 +107,7 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 900px;
+            min-width: 1200px;
         }
 
         th {
@@ -126,6 +126,7 @@
 
         .service-input {
             width: 100%;
+            min-width: 120px;
             padding: 0.5rem;
             border: 1px solid #dee2e6;
             border-radius: 4px;
@@ -272,6 +273,18 @@
                 font-size: 0.8rem;
             }
         }
+        th, td {
+    min-width: 120px;
+    white-space: nowrap;
+}
+
+th:first-child, td:first-child {
+    min-width: 150px;
+}
+
+th:nth-child(6), td:nth-child(6) {
+    min-width: 200px;
+}
     </style>
 </head>
 <body>
@@ -509,6 +522,13 @@
                 
                 // Get the current page URL properly
                 const currentURL = window.location.href.split('?')[0]; // Remove any existing query params
+
+
+
+
+
+
+                
                 const shareURL = currentURL + '?data=' + encodedData;
                 
                 console.log('Created share URL:', shareURL);
